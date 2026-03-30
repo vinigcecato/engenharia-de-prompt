@@ -94,7 +94,6 @@ Seja claro, objetivo e didático.
 
 ## 👥 Equipe
 
-* Vitor Cecato
 * Bernardo Renó
 * Lucas Gabriel
 * Pedro Conceição
