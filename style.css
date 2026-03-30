@@ -68,7 +68,6 @@ section {
     align-items: center;
     align-self: center;
     width: 50%;
-    align-items: center;
     background: #1e293b;
     padding: 20px;
     border-radius: 12px;
@@ -244,4 +243,80 @@ th {
 
 #quiz button {
     font-weight: bold;
+}
+
+@media screen and (max-width: 430px) {
+    .card {
+        width: 80%;
+    }
+    nav a {
+        width: 25%;
+        text-align: center;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-content p {
+        align-self: center;
+        width: 80%;
+    }
+    table {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    tr {
+        display: flex;
+        flex-direction: column;
+        background: #1e293b;
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        text-align: left;
+        border: none;
+        padding: 8px 0;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #00bcd4;
+        min-width: 100px;
+    }
+
+    #exemplos p {
+        width: 90%;
+    }
+
+    .option {
+        width: 80%;
+    }
+
+    #quiz p {
+        font-size: 5vw;
+        width: 90%;
+    }
+
+    #quiz button {
+        transform: scale(1.1);
+    }
+
+    #gerador button {
+        transform: scale(1.1);
+    }
 }
