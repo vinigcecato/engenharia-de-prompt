@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engenharia de Prompts</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <a onclick="showPage('home')">Início</a>
+        <a onclick="showPage('teoria')">Estrutura</a>
+        <a onclick="showPage('metodos')">Métodos</a>
+        <a onclick="showPage('exemplos')">Exemplos</a>
+        <a onclick="showPage('quiz')">Quiz</a>
+        <a onclick="showPage('gerador')">Criar Prompt</a>
+    </nav>
+
+    <section id="home" class="active">
+        <h1>Engenharia de Prompts</h1>
+        <div class="card">
+            <p>A engenharia de prompt é a habilidade de escrever instruções claras para IA. <br> Ela é essencial para
+                obter respostas melhores e desenvolver pensamento crítico.</p>
+        </div>
+        <br><br>
+        <h1>Objetivos de Aprendizagem</h1>
+        <div class="card">
+            <ul>
+                <li>Compreender o que é um prompt e como a IA baseada em linguagem (ex.: ChatGPT) responde a instruções
+                    em linguagem natural.</li>
+                <li>Desenvolver capacidade de formular prompts claros e específicos (declarando o público, contexto e
+                    formato desejado) para obter respostas mais precisas.</li>
+                <li>Exercitar a iteração no refinamento de prompts: testar respostas da IA, avaliar erros ou
+                    imprecisões, ajustar o comando e re-tentar.</li>
+                <li>Promover competências digitais e pensamento crítico: avaliar criticamente as respostas da IA, checar
+                    fontes e discutir questões éticas (viés, uso indevido).</li>
+            </ul>
+        </div>
+        <br><br>
+        <h1>Conceitos Básicos</h1>
+        <div class="card sp">
+            <p><strong>O que é Inteligência Artificial (IA):</strong> Sistemas capazes de realizar tarefas antes restritas a humanos, como
+            responder perguntas, traduzir ou gerar textos. Na prática cotidiana, encontramos IA em assistentes virtuais,
+            aplicativos de tradução e ferramentas de pesquisa (web, voz).</p> 
+
+
+            <p><strong>O que é um prompt:</strong> É o conjunto de instruções ou perguntas que damos a uma IA conversacional para orientar
+            sua resposta. Quanto mais claro e específico for o prompt, mais relevante será a resposta obtida. Por
+            exemplo, em vez de “Fale sobre o Brasil”, um prompt eficaz seria “Liste 5 fatos históricos sobre a
+            independência do Brasil para alunos do 9º ano”.</p> 
+
+
+            <p><strong>Tipos de IA que respondem a prompts:</strong> Modelos de linguagem (ex.: ChatGPT, Google Bard) respondem a perguntas
+            textuais. Assistentes de voz (Siri, Alexa) respondem a comandos falados. Geradores de imagem (DALL·E,
+            Midjourney) criam imagens a partir de descrições.</p>
+        </div>
+    </section>
+
+    <section id="teoria">
+        <h1>Métodos e Estruturas para Prompts Eficazes</h1>
+        <div class="card">
+            <p>Para construir prompts eficientes, adotamos práticas de prompt engineering. Os principais pilares
+                incluem:</p>
+            <ul>
+                <li><span class="tBold">Instruções claras e específicas:</span> Evite comandos vagos; detalhe o que
+                    quer. Por exemplo, especifique
+                    o público-alvo (“alunos do 9º ano”), o formato da resposta (“lista em tópicos”, “resumo de 5
+                    frases”), e o objetivo (“responder curiosidades”, “ensinar passo a passo”). Instruções cirúrgicas
+                    reduzem respostas genéricas.
+                </li>
+                <li><span class="tBold">Contexto e exemplos:</span> Forneça informações de fundo ou exemplos no próprio
+                    prompt para guiar a IA. Por
+                    exemplo, diga “Resumo: [cole o texto]” ou descreva o cenário antes de perguntar. Mais contexto ajuda
+                    a IA a entender nuances e produzir respostas mais precisas.
+                </li>
+                <li><span class="tBold">Definir papel/tom:</span> Instrua a IA a “agir como” um especialista, professor
+                    ou personagem, moldando linguagem e nível de detalhe.
+                    Ex.: “Aja como se fosse um professor de história e explique a Revolução Industrial de forma simples
+                    para um aluno do 9º ano.” Isso ajusta o tom e aprofunda a resposta.
+                    Formato da resposta: Solicite o formato desejado (lista, tabela, pergunta-resposta, código, etc.)
+                    Ex.: “Liste 5 causas da Fotossíntese em bullet points.” Um formato definido ajuda a organizar a
+                    informação de modo útil para os alunos.</li>
+                <li><span class="tBold">Uso de exemplos prévio (few-shot):</span> Quando possível, forneça um ou mais
+                    exemplos de perguntas e respostas como guia. Isso “treina” a IA no estilo esperado, melhorando
+                    resultados em tarefas específicas (técnica few-shot).
+                </li>
+                <li><span class="tBold">Iteração e refinamento:</span> Raramente o primeiro prompt é perfeito. Siga um
+                    ciclo iterativo: 1) envie o prompt inicial, 2) avalie a resposta recebida, 3) ajuste o prompt
+                    acrescentando clareza, contexto ou instruções diferentes, 4) repita até a resposta ficar
+                    satisfatória. Cada tentativa é aprendizado,não desista da primeira resposta “ruim”.
+                </li>
+            </ul>
+            <p>Além dessas práticas, técnicas mais avançadas podem ser introduzidas ao professor (por exemplo,
+                chain-of-thought prompting para respostas passo a passo). Em síntese, um bom prompt indica público,
+                objetivo e formato desejado, e quantifica, limita ou exemplifica conforme necessário.</p>
+        </div>
+    </section>
+
+    <section id="metodos">
+        <h1>Modelos de Prompt para Alunos do 9º Ano</h1>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Objetivo</th>
+                        <th>Template de Prompt</th>
+                        <th>Exemplo (9º ano)</th>
+                        <th>Quando usar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Explicar conceito difícil</td>
+                        <td>“Explique [conceito] de forma simples para alunos do 9º ano, usando exemplos e analogias.”
+                        </td>
+                        <td>“Explique a fotossíntese para alunos do 9º ano de forma simples, com exemplos do dia a dia.”
+                        </td>
+                        <td>Quando o conceito é complexo e requer simplificação.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Planejar redação ou trabalho</td>
+                        <td>“Crie um esboço de redação sobre [tema] para alunos do 9º ano, incluindo introdução, 3
+                            argumentos e conclusão.”</td>
+                        <td>“Crie um esboço de redação sobre ‘Importância da conservação ambiental’ para alunos do 9º
+                            ano.”</td>
+                        <td>Ao organizar ideias antes de escrever redação ou artigo.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Gerar perguntas de revisão</td>
+                        <td>“Liste [n] perguntas (com resposta correta) sobre [tópico] para alunos do 9º ano.”</td>
+                        <td>“Liste 5 perguntas de múltipla escolha sobre Segunda Guerra Mundial para alunos do 9º ano.”
+                        </td>
+                        <td>Para avaliar aprendizagem ou preparar para prova.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Pesquisar fontes confiáveis</td>
+                        <td>“Sugira fontes confiáveis (sites, livros, autores) para pesquisar sobre [tópico].”</td>
+                        <td>“Sugira fontes confiáveis para pesquisar sobre aquecimento global para um trabalho escolar
+                            do 9º ano.”</td>
+                        <td>Na fase de pesquisa de trabalho ou projeto escolar.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Decodificar instruções</td>
+                        <td>“Explique em linguagem simples o que significa: ‘texto de instruções da tarefa’.”</td>
+                        <td>“Explique o que o professor quer dizer ao pedir ‘Faça um resumo crítico do texto’.”</td>
+                        <td>Quando o aluno precisa entender claramente o enunciado.</td>
+                    </tr>
+
+                    <tr>
+                        <td>Verificar informação (fact-check)</td>
+                        <td>“Como posso verificar se a informação ‘[fato gerado pela IA]’ é verdadeira?”</td>
+                        <td>“Como posso checar se é verdade que ‘o Brasil foi descoberto em 1500’?”</td>
+                        <td>Para ensinar avaliação de fontes e detectar informações falsas.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <section id="exemplos">
+        <h1>Exemplos de Prompts</h1>
+
+        <div class="card">
+            <h2>📚 Para escola (resumo)</h2>
+            <p><strong>❌ Prompt fraco:</strong> "Resume isso"</p>
+            <p><strong>✅ Prompt bom:</strong> "Faça um resumo do conteúdo sobre Segunda Guerra Mundial para um aluno de
+                9º ano, explicando de forma simples e organizada em tópicos. Inclua exemplos e destaque os pontos mais
+                importantes para prova."</p>
+        </div>
+
+        <div class="card">
+            <h2>🖼️ Para gerar imagem</h2>
+            <p><strong>❌ Prompt fraco:</strong> "Cria um cenário"</p>
+            <p><strong>✅ Prompt bom:</strong> "Crie uma imagem de um cenário inspirado no deserto, com céu azul, sol
+                forte e chão seco rachado. O estilo deve ser artístico, com cores vibrantes e sem personagens."</p>
+        </div>
+
+        <div class="card">
+            <h2>⚽ Para futebol</h2>
+            <p><strong>❌ Prompt fraco:</strong> "Explica tática"</p>
+            <p><strong>✅ Prompt bom:</strong> "Explique a tática 4-3-3 no futebol de forma simples para iniciantes,
+                descrevendo a função de cada posição e dando um exemplo prático de como ela funciona em jogo."</p>
+        </div>
+
+        <div class="card">
+            <h2>💻 Para criação de texto</h2>
+            <p><strong>❌ Prompt fraco:</strong> "Escreve um texto"</p>
+            <p><strong>✅ Prompt bom:</strong> "Escreva um texto dissertativo de aproximadamente 15 linhas sobre a
+                importância do trabalho em equipe no esporte, usando linguagem simples e adequada para um aluno do
+                ensino fundamental."</p>
+        </div>
+
+        <div class="card">
+            <h2>🎨 Para edição de imagem</h2>
+            <p><strong>❌ Prompt fraco:</strong> "Edita essa foto"</p>
+            <p><strong>✅ Prompt bom:</strong> "Edite essa imagem removendo o fundo, melhorando a iluminação e ajustando
+                as cores para deixar mais vibrantes. Mantenha o rosto da pessoa exatamente igual, sem alterações."</p>
+        </div>
+    </section>
+
+    <section id="quiz">
+        <h1>Quiz Completo</h1>
+        <br>
+        <p>1. Qual é o melhor prompt?</p>
+        <label class="option"><input type="radio" name="q1" value="a"> <span>“Escreva uma redação sobre meio ambiente
+                com 15 linhas”</span></label>
+        <label class="option"><input type="radio" name="q1" value="b"> <span>“Faça um texto sobre meio ambiente”</label>
+        <label class="option"><input type="radio" name="q1" value="c"> <span>“Escreva um texto com introdução,
+                desenvolvimento e conclusão”</span></label>
+        <label class="option"><input type="radio" name="q1" value="d"> <span>“Escreva uma redação de 15 a 20 linhas
+                sobre preservação do meio
+                ambiente, com introdução, desenvolvimento e conclusão, usando linguagem simples e argumentos
+                claros”</span></label>
+<br>
+        <p>2. Qual é o melhor prompt?</p>
+        <label class="option"><input type="radio" name="q2" value="a"> <span>“Explique as causas da Revolução
+                Industrial”</span></label>
+        <label class="option"><input type="radio" name="q2" value="b"> <span>“Fale sobre Revolução
+                Industrial”</span></label>
+        <label class="option"><input type="radio" name="q2" value="c"> <span>“Explique causas e consequências da
+                Revolução Industrial”</span></label>
+        <label class="option"><input type="radio" name="q2" value="d"> <span>“Explique as causas e consequências da
+                Revolução Industrial de forma
+                simples, organizado em tópicos, com exemplos e impacto na sociedade atual”</span></label>
+<br>
+        <p>3. Qual é o melhor prompt:</p>
+        <label class="option"><input type="radio" name="q3" value="a"> <span>“Explique detalhadamente o conceito de
+                globalização, incluindo todos os
+                aspectos possíveis como econômicos, sociais, culturais, políticos, históricos, ambientais, com exemplos,
+                comparações, análises profundas, impacto mundial, consequências futuras, usando linguagem formal,
+                técnica,
+                extremamente completa e aprofundada.”</span></label>
+        <label class="option"><input type="radio" name="q3" value="b"> <span>“Explique globalização de forma
+                completa”</span></label>
+        <label class="option"><input type="radio" name="q3" value="c"> <span>“Explique o conceito de globalização para
+                um aluno do 9º ano, com
+                exemplos simples e linguagem clara”</span></label>
+        <label class="option"><input type="radio" name="q3" value="d"> <span>“Explique absolutamente tudo sobre
+                globalização com o máximo de
+                detalhes possível, sem resumir nada e incluindo todas as informações existentes sobre o
+                tema”</span></label>
+<br>
+        <p>4. O que esse prompt está fazendo corretamente: <br> “Explique a Revolução Francesa para um aluno iniciante,
+            em tópicos e com linguagem simples”
+        </p>
+        <label class="option"><input type="radio" name="q4" value="a"> <span>Está confuso</span></label>
+        <label class="option"><input type="radio" name="q4" value="b"> <span>Está incompleto</span></label>
+        <label class="option"><input type="radio" name="q4" value="c"> <span>Define público, formato e
+                estilo</span></label>
+        <label class="option"><input type="radio" name="q4" value="d"> <span>Está errado</span></label>
+<br>
+        <p>5. Prompt: <br> “Explique as causas da Primeira Guerra Mundial para iniciantes, com exemplos e linguagem
+            simples”
+            Esse prompt é:</p>
+        <label class="option"><input type="radio" name="q5" value="a"> <span>Ruim</span></label>
+        <label class="option"><input type="radio" name="q5" value="b"> <span>Médio, mas com muitos erros</span></label>
+        <label class="option"><input type="radio" name="q5" value="c"> <span>Bom, mas ainda pode melhorar com mais
+                direcionamento</span></label>
+        <label class="option"><input type="radio" name="q5" value="d"> <span>Perfeito e não pode melhorar</span></label>
+<br>
+        <p>6.Prompt: <br> “Explique o que é inteligência artificial para iniciantes, com exemplos do dia a dia,
+            linguagem simples e em tópicos”
+            <br> Esse prompt é:
+        </p>
+        <label class="option"><input type="radio" name="q6" value="a"> <span>Ruim</span></label>
+        <label class="option"><input type="radio" name="q6" value="b"> <span>Médio</span></label>
+        <label class="option"><input type="radio" name="q6" value="c"> <span>Bom, mas pode melhorar</span></label>
+        <label class="option"><input type="radio" name="q6" value="d"> <span>Perfeito</span></label>
+
+
+        <br>
+        <button onclick="corrigir()">Corrigir</button>
+        <p id="resultado"></p>
+        <div id="explicacao"></div>
+    </section>
+
+    <section id="gerador">
+        <h1>Gerador de Prompt Inteligente</h1>
+
+        <input id="papel" placeholder="Papel da IA (ex: professor de história)"><br><br>
+        <input id="tarefa" placeholder="Tarefa (ex: explicar a Segunda Guerra)"><br><br>
+        <input id="contexto" placeholder="Contexto (ex: para aluno do 9º ano)"><br><br>
+        <input id="formato" placeholder="Formato (ex: em tópicos, resumo, passo a passo)"><br><br>
+        <input id="limite" placeholder="Limites (ex: máximo 10 linhas, linguagem simples)"><br><br>
+
+        <button onclick="gerarPrompt()">Gerar Prompt</button>
+        <br>
+        <section class="card">
+            <h3>Prompt gerado abaixo:</h3>
+            <p id="promptFinal"></p>
+        </section>
+    </section>
+
+    <footer class="footer-content">
+        <p>© 2026 Engenharia de Prompts</p>
+        <p>Desenvolvido por IA</p>
+        <p>Hospedado por Vitor Cecato</p>
+        <p>Grupo do trabalho: Bernardo Renó, Lucas Gabriel, Pedro Conceição e Vinicius Cecato</p>
+
+        <div class="footer-links">
+            <a onclick="showPage('home')">Início</a>
+            <a onclick="showPage('teoria')">Estrutura</a>
+            <a onclick="showPage('quiz')">Quiz</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
